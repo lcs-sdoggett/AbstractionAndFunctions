@@ -21,6 +21,9 @@ import Foundation
  
  */
 
+/// Find the area of the cirle.
+/// - Parameter radius: radius of the cirlce
+/// - Returns: area of the circle
 func areaOfCircle(radius: Double) -> Double {
     return Double.pi * pow(radius, 2.0)
 }
