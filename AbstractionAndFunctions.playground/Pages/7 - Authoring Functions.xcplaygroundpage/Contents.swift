@@ -36,6 +36,8 @@ func areaOfTrianlge (base: Double, height: Double) -> Double{
     return (base * height) / 2
 }
 
+let aTriangle = areaOfTrianlge(base: 3, height: 4)
+
 /// Find the area of a circle
 /// - Parameter radius: Radius of the circle
 /// - Returns: The area of the circle
