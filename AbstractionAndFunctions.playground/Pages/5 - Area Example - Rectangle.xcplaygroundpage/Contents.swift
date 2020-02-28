@@ -17,8 +17,15 @@
 /// - Parameter length: length of rectangle
 /// - Parameter width: width of rectangle
 /// - Returns: area of the rectangle
-func areaOfRectangle(length: Double, width: Double) -> Double {
+func areaOfRectangle(length: Double, width: Double) -> Double? {
     
+    // Ensure that we have resoanble values
+    
+    guard length > 0, width > 0 else {
+        return nil
+    }
+    
+    // We have resonable values, so return the area
     return length * width
     
 }
@@ -30,12 +37,21 @@ func areaOfRectangle(length: Double, width: Double) -> Double {
  */
 
 // Invoke the function... to find the area of a rectangle that is 10 units long and 5 units wide
+// Test case #1: length: 10, width: 5, result: 50
 let result = areaOfRectangle(length: 10, width: 5)
+
+// Test case #2: length: 10.5, width: 10, result: 105
+areaOfRectangle(length: 10.5, width: 10)
 
 // Report the results
 print("The area of that rectangle was \(result) square units.")
 
- 
+// Test case #3: length: 10.5, width: -10, result: 105
+areaOfRectangle(length: 5, width: -25)
+
+// Test case #4: length: 10.5, width: 10, result: 105
+areaOfRectangle(length: -5, width: 25)
+
 /*:
  
  Try option clicking on function name, where it is invoked on line 33:
